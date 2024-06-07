@@ -1,5 +1,6 @@
 name: Dependent Workflow
 on:
+  push:
   workflow_run:
     workflows: ["Initial Workflow"]
     types: [completed]
