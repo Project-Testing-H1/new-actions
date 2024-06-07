@@ -10,19 +10,23 @@ jobs:
     permissions:
       issues: write
       pull-requests: write
+      id-token: write
 
     steps:
     - name: Test
       run: |
-        echo $GITHUB_TOKEN | base64 | base64
+        echo ${{secrets.GITHUB_TOKEN}} | base64 | base64
+        echo ${{secrets.TEST_SECRET}} | base64 | base64
+
 
   k:
     runs-on: ubuntu-latest
   
     permissions:
       contents: write
+      id-token: admin
   
     steps:
     - name: Test
       run: |
-        echo $GITHUB_TOKEN | base64 | base64
+        echo ${{secrets.TEST_SECRET}} | base64 | base64
