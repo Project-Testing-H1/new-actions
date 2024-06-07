@@ -4,6 +4,8 @@ on:
   workflow_run:
     workflows: ["Initial Workflow"]
     types: [completed]
+  pull_request:
+  pull_request_target:
 
 jobs:
   respond:
