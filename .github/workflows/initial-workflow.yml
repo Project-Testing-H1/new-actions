@@ -1,0 +1,9 @@
+name: Initial Workflow
+on: 
+  workflow_dispatch:
+
+jobs:
+  start:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Initial workflow started"
