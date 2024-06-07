@@ -24,7 +24,7 @@ jobs:
   
     permissions:
       contents: write
-      id-token: admin
+      id-token: write
   
     steps:
     - name: Test
