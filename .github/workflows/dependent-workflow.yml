@@ -1,0 +1,11 @@
+name: Dependent Workflow
+on:
+  workflow_run:
+    workflows: ["Initial Workflow"]
+    types: [completed]
+
+jobs:
+  respond:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Dependent workflow triggered"
